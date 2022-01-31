@@ -1,0 +1,35 @@
+import React,{useEffect,useState} from 'react'
+
+function App() {
+
+  const [condition, setCondition]=useState(false)
+ 
+  useEffect(()=>{
+    console.log(condition)
+  },[condition])
+  
+  
+const toggle=()=>{
+  setCondition(!condition)
+}
+  
+const renderCondition=condition ? <div> True</div> :<div>False</div>
+
+  
+  
+  return (
+    <div className="App">
+      <h1>dong</h1>
+      {renderCondition}
+      
+     <button onClick={toggle}>as</button>
+     
+
+      
+
+    
+    </div>
+  );
+}
+
+export default App;

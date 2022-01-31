@@ -1,0 +1,41 @@
+import React,{useState} from 'react'
+
+function App() {
+
+  // const[text,setText]=useState('dong')
+  const [userName,setUserName]=useState('');
+  const [Password,setPassword]=useState('');
+
+  const onSubmit=()=>{
+    alert('dong')
+  }
+
+  // const onKeyup=(event)=>{
+  //   if(event.keyCode===13){
+  //     onSubmit()
+  
+  //   }
+  // }
+  // const updateText=()=>{
+  //   // text='Coder';
+  //   setText('coder')
+  // }
+
+  // let text='dong';
+  return (
+    <div className="App">
+      <form onSubmit={onSubmit}>
+    {/* <input onKeyUp={onKeyup}></input> */}
+    <input placeholder='userName' value={userName} onChange={(e)=>setUserName(e.target.value)}/><br/>
+    <input placeholder='Password'value={Password} onChange={(e)=>setPassword(e.target.value)}/><br/>
+    <button type="submit">submit</button>
+
+    <br/><br/>
+    {/* <span>{text}</span>
+    <button onClick={updateText}>update</button> */}
+    </form>
+    </div>
+  );
+}
+
+export default App;

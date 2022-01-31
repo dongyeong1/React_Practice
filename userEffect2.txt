@@ -1,0 +1,41 @@
+import React,{useEffect,useState} from 'react'
+import Counter from './components/Counter'
+function App() {
+  // const [count,setCount]=useState(0)
+  // const [count1,setCount1]=useState(0)
+  const [buttonName,setbuttonName]=useState('클릭')
+
+  const clickButton=()=>{
+    setbuttonName('click');
+  }
+  
+  
+
+  
+
+
+  
+  // const increment=()=>{
+  //   setCount(count+1)
+  // }
+  // const increment1=()=>{
+  //   setCount1(count1+1)
+  // }
+
+  return (
+    <div className="App">
+      <h1>dong</h1>
+      {/* <button onClick={increment}>asd{count}</button>
+      <button onClick={increment1}>asd{count1}</button> */}
+     
+
+      <Counter click="click1"/>
+      <Counter click={buttonName}/>
+      <button onClick={clickButton}>!! </button>
+
+    
+    </div>
+  );
+}
+
+export default App;
